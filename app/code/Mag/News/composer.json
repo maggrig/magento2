@@ -1,0 +1,28 @@
+{
+  "name": "mag/module-news",
+  "description": "",
+  "type": "magento2-module",
+  "license": "proprietary",
+  "authors": [
+    {
+      "email": "info@mage2gen.com",
+      "name": "Mage2Gen"
+    },
+    {
+      "email": "grigoriymartinenko@gmail.com",
+      "name": "Grigoriy Martinenko"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "~5.5.0|~5.6.0|~7.0.0|7.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mag\\News\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}
