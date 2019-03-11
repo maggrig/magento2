@@ -44,7 +44,6 @@ class AddAttrib
         $this->attributeOptionManagement = $attributeOptionManagement;
         $this->optionFactory = $optionFactory;
         $this->state = $state;
-//        $this->state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
     }
 
     function addAttr(InputInterface $input)
