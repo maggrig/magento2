@@ -4,8 +4,9 @@
  * See COPYING.txt for license details.
  */
 
-namespace Magento\CommandExample\Console\Command;
+namespace Mag\News\Console\Command;
 
+use Mag\News\Controller\AddProd;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -15,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * Class CommandAddProd
  */
-class GreetingCommand extends Command
+class CommandAddProd extends Command
 {
     /**
      * Name argument
@@ -31,14 +32,21 @@ class GreetingCommand extends Command
      * Anonymous name
      */
     const ANONYMOUS_NAME = 'Anonymous';
+    protected $addProd;
+
+    public function __construct(AddProd $addProd)
+    {
+        $this->addProd = $addProd;
+        parent::__construct();
+    }
 
     /**
      * {@inheritdoc}
      */
     protected function configure()
     {
-        $this->setName('example:greeting')
-            ->setDescription('Greeting command')
+        $this->setName('example:newprod')
+            ->setDescription('Add new product')
             ->setDefinition([
                 new InputArgument(
                     self::NAME_ARGUMENT,
@@ -62,15 +70,8 @@ class GreetingCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $name = $input->getArgument(self::NAME_ARGUMENT);
-        $allowAnonymous = $input->getOption(self::ALLOW_ANONYMOUS);
-        if (is_null($name)) {
-            if ($allowAnonymous) {
-                $name = self::ANONYMOUS_NAME;
-            } else {
-                throw new \InvalidArgumentException('Argument ' . self::NAME_ARGUMENT . ' is missing.');
-            }
-        }
-        $output->writeln('<info>Hello ' . $name . '!</info>');
+        $AddProd = $this->addProd;
+        $AddProd->addProd($input);
     }
+
 }

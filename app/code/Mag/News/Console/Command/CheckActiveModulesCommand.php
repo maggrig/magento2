@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Magento\CommandExample\Console\Command;
+namespace Mag\News\Console\Command;
 
 use Magento\Framework\Module\ModuleListInterface;
 use Symfony\Component\Console\Command\Command;
