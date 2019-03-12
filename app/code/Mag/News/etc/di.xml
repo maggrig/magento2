@@ -7,11 +7,8 @@
                 <item name="command_add_prod" xsi:type="object">Mag\News\Console\Command\CommandAddProd</item>
                 <item name="command_add_cat" xsi:type="object">Mag\News\Console\Command\CommandAddCat</item>
                 <item name="command_add_attr" xsi:type="object">Mag\News\Console\Command\CommandAddAttr</item>
-                <item name="check_active_status_command" xsi:type="object">
-                    Mag\News\Console\Command\CheckActiveModulesCommand
-                </item>
+                <item name="command_view_core_web" xsi:type="object">Mag\News\Console\Command\CommandViewCoreWeb</item>
             </argument>
         </arguments>
     </type>
-
 </config>

@@ -29,20 +29,20 @@ class AddProd
     public const ANONYMOUS_NAME = 'Anonymous';
 
     public $state;
-    public $attributeOptionManagement;
-    public $optionFactory;
-    public $eavConfig;
+//    public $attributeOptionManagement;
+//    public $optionFactory;
+//    public $eavConfig;
 
     public function __construct(
         \Magento\Framework\App\State $state
-        , \Magento\Eav\Model\Config $eavConfig
-        , \Magento\Eav\Api\AttributeOptionManagementInterface $attributeOptionManagement
-        , \Magento\Eav\Api\Data\AttributeOptionInterfaceFactory $optionFactory
+//        , \Magento\Eav\Model\Config $eavConfig
+//        , \Magento\Eav\Api\AttributeOptionManagementInterface $attributeOptionManagement
+//        , \Magento\Eav\Api\Data\AttributeOptionInterfaceFactory $optionFactory
     )
     {
-        $this->eavConfig = $eavConfig;
-        $this->attributeOptionManagement = $attributeOptionManagement;
-        $this->optionFactory = $optionFactory;
+//        $this->eavConfig = $eavConfig;
+//        $this->attributeOptionManagement = $attributeOptionManagement;
+//        $this->optionFactory = $optionFactory;
         $this->state = $state;
 //        $this->state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
     }
@@ -79,6 +79,7 @@ class AddProd
             )
         );
         $product->save();
+        echo "All ok";
     }
 
     function addTestProd()
@@ -105,6 +106,7 @@ class AddProd
             )
         );
         $product->save();
+        echo "Test ok";
     }
 
 }

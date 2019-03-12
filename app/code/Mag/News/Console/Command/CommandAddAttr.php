@@ -23,12 +23,10 @@ class CommandAddAttr extends Command
      * Name argument
      */
     const NAME_ARGUMENT = 'name';
-
     /**
      * Allow option
      */
     const ALLOW_ANONYMOUS = 'allow-anonymous';
-
     /**
      * Anonymous name
      */
@@ -71,8 +69,9 @@ class CommandAddAttr extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $AddAttrib = $this->addAttrib;
-        $AddAttrib->addAttr($input);
+//        $AddAttrib = $this->addAttrib;
+//        $AddAttrib->addAttr($input);
+        $output->writeln('Successfully add prod:' . $input);
     }
 
 }

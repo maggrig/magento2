@@ -5,6 +5,5 @@
         <route frontName="mag_news" id="mag_news">
             <module name="Mag_News"/>
         </route>
-
     </router>
 </config>
