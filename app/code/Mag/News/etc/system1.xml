@@ -1,0 +1,3 @@
+<field id="test" translate="label" type="label" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+    <label>Hey you!</label>
+</field>

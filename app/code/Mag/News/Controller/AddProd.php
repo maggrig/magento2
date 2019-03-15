@@ -44,7 +44,7 @@ class AddProd
 //        $this->attributeOptionManagement = $attributeOptionManagement;
 //        $this->optionFactory = $optionFactory;
         $this->state = $state;
-//        $this->state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
+        $this->state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
     }
 
     function addProd(InputInterface $input)

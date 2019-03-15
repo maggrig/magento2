@@ -37,7 +37,7 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-$this->helper->setUp();
+//$this->helper->setUp();
 //        $addAttrib = $this->addAttrib;
 //        if ($AddProd instanceof AddProd)
 //        $addAttrib->addAttribByHelper();
