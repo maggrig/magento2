@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Magefan (support@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mag_News::elements" title="FAQ" module="Mag_News" parent="Magento_Backend::content" sortOrder="10"  resource="Mag_News::elements"/>
+        <add id="Mag_News::News.php" title="FAQ" module="Mag_News" parent="Mag_News::elements" sortOrder="10" action="Reviews/Reviews" resource="Mag_News::News.php"/>
+    </menu>
+</config>

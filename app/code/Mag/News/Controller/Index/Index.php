@@ -14,10 +14,12 @@ class Index extends \Magento\Framework\App\Action\Action
     protected $optionLabelFactory;
     public $eavConfig;
     public $helper;
+    protected $_scopeConfig;
     public function __construct(
         ViewCore $helper,
         \Magento\Framework\App\Action\Context $context
         , \Mag\News\Controller\AddAttrib $addAttrib
+        ,\Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
 //        , \Magento\Eav\Model\Config $eavConfig
 //        , \Magento\Eav\Api\AttributeOptionManagementInterface $attributeOptionManagement
 //        , \Magento\Eav\Api\Data\AttributeOptionLabelInterfaceFactory $optionLabelFactory
@@ -28,6 +30,7 @@ class Index extends \Magento\Framework\App\Action\Action
 //        $this->attributeOptionManagement = $attributeOptionManagement;
 //        $this->optionLabelFactory = $optionLabelFactory;
 //        $this->optionFactory = $optionFactory;
+        $this->_scopeConfig = $scopeConfig;
         $this->helper=$helper;
         $this->addAttrib  = $addAttrib;
         return parent::__construct($context);
@@ -37,6 +40,8 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
+        $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORES;
+        echo $this->scopeConfig->getValue("catalog/Product News/custom_text", $storeScope);
 //$this->helper->setUp();
 //        $addAttrib = $this->addAttrib;
 //        if ($AddProd instanceof AddProd)
